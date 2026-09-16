@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>task 2</title>
+    <style>
+        h1
+            {
+             text-align: center;
+             color:deepskyblue;
+             text-shadow: 2px 2px 3px gray;
+            }
+
+        input 
+             {
+                margin-bottom: 15px;
+              outline: 6px;
+             }  
+
+        label {
+                 display: block;
+                 margin-bottom: 8px;
+             }
+
+        h2   {
+                font-weight: bold;
+             }
+
+        div {
+             margin-bottom: 10px;
+                }
+        body{
+            font-family:Georgia, 'Times New Roman', Times, serif;
+           background-color:lightgray ;
+           background-size: cover;
+        }  
+        .personal{
+            color: brown;
+        }   
+        #dob{
+            margin-bottom: 20px;
+        }   
+        .contact{
+            color: green;
+        }
+        textarea{
+            height: 100px;
+            width: 500px;
+        }
+        form {
+           border: 10px; 
+            background-color: transparent;
+
+        }
+         .first_name{
+            margin-right: 10px;
+         }   
+         th, td {
+    padding-right: 30px;
+}
+    </style>
+</head>
+<body>
+     <h1>University admisssion form</h1>
+     <form  method=”POST” enctype=”multipart/form-data”> 
+
+    <h2 class="personal">Personal information</h2><hr>
+    <div>
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname" name="firstname">
+
+    <div>
+    <label for="lname">Last Name:</label>
+    <input type="text" id="lname" name="lastname">
+    <label for="dob">Date of birth:</label>
+    <input type="date" id="dob" name="date of birth">
+    <label for="gen">Select Gender:</label>
+    <input type="radio" id="gen" name="gender">Male
+    <input type="radio" id="gen" name="gender">Female
+    <br>
+
+    <h2 class="contact">Contact Infromation</h2><hr>
+    <label for="mail">Email:</label>
+    <input type="email" id="mail" name="mail">
+    <label for="numb">Phone number:</label>
+    <input type="number" id="numb" name="phone">
+    <label for="ci">City:</label>
+    <input type="text" id="ci" name="city">
+    <label for="add">Address:</label>
+    <input type="text" id="add" name="address">
+    <h2>Academic Information:</h2><hr>
+    <label for="numb">Previous marks:</label>
+    <input type="number" id="numb" name="numb">
+<div>
+    <label type="pro">Prefered program:</label>
+     <select>
+        <option>Computer Science</option>
+        <option>Computing engineering</option>
+        <option>Electrical engineering</option>
+        <option>Civil engineering</option>
+        <option>Telecommuication</option>
+     </select>
+
+</div>
+    <h2>Skill Information</h2><hr>
+     <label for="skills">Select skills:</label>
+    
+     
+      <input type="checkbox" id="web" name="skills[]" value=”web”>web development</div>
+      <div>
+       <input type="checkbox" id="app" name="skills[]" value=”App”>app development</div>
+       <div>
+        <input type="checkbox" id="cloud" name="skills[]" value=”cloud”>cloud computing</div>
+        <div>
+        <input type="checkbox" id="elctric" name="skills[]" value=”electronic”>Electronics</div>
+        <div>
+        <input type="checkbox" id="AI" name="skills[]" value=”AI”>Artifical intelligent and machine learing</div>
+        <div>
+        <input type="checkbox" id="ski" name="skills[]" value=”data”>Data science</div>
+        <div>
+        <input type="checkbox" id="ski" name="skills[]" value=”Cyber”>Cyber security</div>
+        <div>
+         <input type="checkbox" id="ski" name="skills[]" value=”game”>game development</div>
+       <h2>Profile picture</h2>  <hr>
+    <label for="pic">upload your image:</label>
+    <input  type="file" id="pic" name="pic">
+    <h2>Additional information</h2>
+    <label for="reason">why do you want to join this University?</label>
+     <textarea rows=”10” cols=”10”></textarea>
+     <div>
+     <input type="submit" id="submitBtn" name="submitBtn">
+     </div>
+     <input type="reset" id="resetBtn" name="RestBtn"><br>
+    </form>
+     <p><b>Student Information:</b></p>
+      <table>
+        <thead>
+            <tr>
+            <th >First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Department</th>
+            </tr>
+            <tbody>
+                <tr>
+                    <td>ali</td>
+                    <td>khan</td>
+                    <td>khan1@outlook.com</td>
+                    <td>computer science</td>
+                </tr>
+                <tr>
+                    <td>jabber</td>
+                    <td>kadeem</td>
+                    <td>jabber@outlook.com</td>
+                    <td>electrical engineering</td>
+                </tr>
+                 <tr>
+                    <td>shahbaz</td>
+                    <td>najeeb</td>
+                    <td>shahbaz@outlook.com</td>
+                    <td>civil engineering</td>
+                </tr>
+                 <tr>
+                    <td>abdul </td>
+                    <td>rauf</td>
+                    <td>rauf@outlook.com</td>
+                    <td>mechnical engineering</td>
+
+                </tr>
+                 <tr>
+                    <td>azma</td>
+                    <td>razzaq</td>
+                    <td>azam@outlook.com</td>
+                    <td>computing engineering</td>
+                </tr>
+            </tbody>
+        </thead>
+      </table><br>
+      <p><strong>youtube video directly</strong></p>
+<iframe width="315" height="576" src="https://www.youtube.com/embed/TURXjYOv9mM" title="100 Calls form Mom🙄 , 1 Call from Dad💀." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+<p><b>map of uet mardan</b></p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5671.409119291105!2d72.02177764620872!3d34.19798853133654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38decb39f1a611cb%3A0xca726977b3145ac9!2sUniversity%20of%20Engineering%20%26%20Technology%2C%20Mardan!5e0!3m2!1sen!2s!4v1789580671443!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe><br>
+<p><b>video:</b></p>
+<video width="320" height="240" controls autoplay muted>
+    <source src="video1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video><br>
+<p><b>Audio:</b></p>
+<audio controls autoplay muted>
+    <source src="audio1.mp3" type="audio/mpeg">
+    your browser does not support audio element.
+</audio><br>
+<h2>Complete html code</h2>
+<pre>
+    <code>
+         &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+                  &lt;title&gt;task 2&lt;/title&gt;
+        &lt;style&gt;
+        ........
+        &lt;/style&gt;
+        &lt;/head&gt;  
+         &lt;body&gt;  
+          &lt;form&gt;  
+          ...........
+           &lt;/form&gt;  
+           .........
+            &lt;/body&gt;
+             &lt;/html&gt;
+    </code>
+</pre>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
