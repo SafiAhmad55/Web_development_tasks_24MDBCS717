@@ -266,279 +266,291 @@
  
 <!-- Source Code Section -->
 <section class="container py-5" id="source">
+    <h2 class="text-center mb-4">Source Code</h2>
 
-        <h2 class="text-center mb-4">Source Code</h2>
+    <details>
+        <summary class="mb-3">View the complete page markup</summary>
 
-        <details>
-            <summary class="mb-3">View the complete page markup</summary>
-
-            <div class="source-box">
-                <pre><code>
+        <div class="source-box">
+            <pre><code>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-    &lt;title&gt;Event Registration&lt;/title&gt;
-
-    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-          rel="stylesheet"&gt;
-
-    &lt;script src="https://code.jquery.com/jquery-3.7.1.min.js"&gt;&lt;/script&gt;
-
-    &lt;style&gt;
-        #event_title {
-            text-align: center;
-            color: blue;
-            font-style: italic;
-            line-height: normal;
-        }
-
-        #description {
-            font-size: 20px;
-            color: #000000;
-            text-align: center;
-            background-color: blanchedalmond;
-            padding: 9px;
-            line-height: 1.8;
-        }
-
-        #name {
-            width: 70%;
-            max-width: 379px;
-        }
-
-        #mail {
-            width: 50%;
-            max-width: 370px;
-        }
-
-        #event-selector {
-            width: 50%;
-            max-width: 390px;
-        }
-
-        .btn-primary:hover {
-            background-color: #0b3d91;
-        }
-.source-box pre {
-            background-color:#0d47a1;
-            color: white;
-            padding: 20px;
-            border-radius: 8px;
-            overflow: auto;
-            max-height: 600px;
-            text-align: left;
-            white-space: pre;
-        }
-
-        .source-box code {
-            color: white;
-            font-size: 13px;
-        }
-    &lt;/style&gt;
+    &lt;title&gt;UET Mardan Student Activities Portal&lt;/title&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
 &lt;/head&gt;
+&lt;style&gt;
+    /* My own CSS for UET Mardan Portal */
 
-&lt;body&gt;
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f7fb;
+        color: #333;
+    }
 
-    &lt;h1 id="event_title" class="bg-warning"&gt;
-        Student Event Registration
-    &lt;/h1&gt;
+    h1, h2 {
+        color: #123b66;
+    }
 
-    &lt;p id="description"&gt;
-        Welcome to the Student Event Registration Page!
-        Register now to participate in our exciting university events.
-    &lt;/p&gt;
+    section {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
 
-    &lt;div class="container my-5 p-4 bg-white shadow rounded"&gt;
+    .card {
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        transition: transform 0.3s;
+    }
 
-        &lt;form id="registrationForm" novalidate&gt;
+    .card:hover {
+        transform: translateY(-5px);
+    }
 
-            &lt;label for="name" class="form-label fw-bold text-primary"&gt;
-                Student Name:
-            &lt;/label&gt;
+    .card img {
+        height: 180px;
+        object-fit: cover;
+    }
 
-            &lt;input type="text" name="student-name"
-                   id="name" class="form-control"&gt;
+    .btn-primary {
+        background-color: #0d6efd;
+        border-color: #0d6efd;
+    }
 
-            &lt;label for="mail" class="form-label fw-bold text-info"&gt;
-                Email:
-            &lt;/label&gt;
+    footer {
+        background-color: #212529;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+&lt;/style&gt;
+&lt;body style="min-height: 100vh; overflow-y: auto;"&gt;
 
-            &lt;input type="email" name="student-email"
-                   id="mail" class="form-control"&gt;
-
-            &lt;label for="event-selector"
-                   class="form-label fw-bold text-success"&gt;
-                Select Event:
-            &lt;/label&gt;
-
-            &lt;select name="event" id="event-selector"
-                    class="form-select"&gt;
-
-                &lt;option value=""&gt;Choose an event&lt;/option&gt;
-                &lt;option value="Sports"&gt;Sports Event&lt;/option&gt;
-                &lt;option value="Programming Competition"&gt;
-                    Programming Competition
-                &lt;/option&gt;
-                &lt;option value="Gaming Competition"&gt;
-                    Gaming Competition
-                &lt;/option&gt;
-
-            &lt;/select&gt;
-
-            &lt;div class="mt-3"&gt;
-                &lt;button type="submit" class="btn btn-primary"&gt;
-                    Register Now
-                &lt;/button&gt;
-            &lt;/div&gt;
-
-            &lt;div class="mt-2"&gt;
-                &lt;label for="detail"
-                       class="form-label fw-bold mt-4"&gt;
-                    Registration Detail:
-                &lt;/label&gt;
-
-                &lt;textarea name="detail" id="detail"
-                          class="form-control" rows="3" readonly&gt;&lt;/textarea&gt;
-            &lt;/div&gt;
-
-        &lt;/form&gt;
-
-        &lt;button type="button" id="changeStyle"
-                class="btn btn-warning mt-3"&gt;
-            Change Heading Style
-        &lt;/button&gt;
-
-        &lt;div class="mt-5"&gt;
-            &lt;button type="button" id="toggleinstruction"
-                    class="btn btn-info"&gt;
-                Show/Hide Instructions
+    &lt;!-- Navigation Bar --&gt;
+    &lt;nav class="navbar navbar-expand-lg navbar-dark bg-dark"&gt;
+        &lt;div class="container"&gt;
+            &lt;a class="navbar-brand" href="#home"&gt;UET Mardan Portal&lt;/a&gt;
+            &lt;button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#mainMenu"
+                aria-controls="mainMenu" aria-label="Toggle navigation"
+                aria-expanded="false"&gt;
+                &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
             &lt;/button&gt;
 
-            &lt;p id="sh"&gt;
-                Please enter your name and email!
-            &lt;/p&gt;
-        &lt;/div&gt;
-
-        &lt;div class="mt-3"&gt;
-            &lt;button type="button" id="toggleevent"
-                    class="btn btn-secondary"&gt;
-                Show/Hide Events
-            &lt;/button&gt;
-
-            &lt;div id="eventDetails" class="alert alert-info"&gt;
-                &lt;p&gt;&lt;strong&gt;Sports Event:&lt;/strong&gt;
-                    Participate in university sports activities.
-                &lt;/p&gt;
-
-                &lt;p&gt;&lt;strong&gt;Programming Competition:&lt;/strong&gt;
-                    Test your programming skills.
-                &lt;/p&gt;
-
-                &lt;p&gt;&lt;strong&gt;Gaming Competition:&lt;/strong&gt;
-                    Enjoy friendly gaming challenges.
-                &lt;/p&gt;
+            &lt;div class="collapse navbar-collapse" id="mainMenu"&gt;
+                &lt;div class="navbar-nav"&gt;
+                    &lt;a class="nav-link" href="#home"&gt;Home&lt;/a&gt;
+                    &lt;a class="nav-link" href="#About"&gt;About&lt;/a&gt;
+                    &lt;a class="nav-link" href="#Events"&gt;Events&lt;/a&gt;
+                    &lt;a class="nav-link" href="#Schedule"&gt;Schedule&lt;/a&gt;
+                    &lt;a class="nav-link" href="#Registration"&gt;Registration&lt;/a&gt;
+                    &lt;a class="nav-link" href="#Contact"&gt;Contact&lt;/a&gt;
+                &lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
+    &lt;/nav&gt;
 
-        &lt;h4 class="mt-3"&gt;Selected Event List&lt;/h4&gt;
+    &lt;!-- Home Section --&gt;
+    &lt;section id="home"&gt;
+        &lt;div class="container py-5"&gt;
+            &lt;h1&gt;Welcome to the UET Mardan Student Activities Portal&lt;/h1&gt;
+            &lt;p&gt;It is a website which deals with the students of UET Mardan.
+                Students can discover university events, workshops, sports
+                activities and campus programs.&lt;/p&gt;
+            &lt;img src="sports_1.jpg"
+                alt="Students involved in sports events"
+                class="img-fluid mb-4"&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
 
-        &lt;button type="button" id="addEvent"
-                class="btn btn-success mb-3"&gt;
-            Add Selected Event to List
-        &lt;/button&gt;
+    &lt;!-- About Section --&gt;
+    &lt;section id="About"&gt;
+        &lt;div class="container py-5"&gt;
+            &lt;h2&gt;About Our Portal&lt;/h2&gt;
+            &lt;p&gt;The UET Mardan Student Activities Portal helps students
+                stay updated about university events, workshops, sports
+                competitions and cultural activities. It provides information
+                about upcoming events, schedules and registration so students
+                can participate in university life.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
 
-        &lt;p id="jqueryMessage" class="text-danger"&gt;&lt;/p&gt;
+    &lt;!-- Events Section --&gt;
+    &lt;section id="Events"&gt;
+        &lt;div class="container py-5"&gt;
+            &lt;h2 class="text-center mb-4"&gt;Upcoming Events&lt;/h2&gt;
+            &lt;div class="row g-4"&gt;
 
-        &lt;ul id="eventList" class="list-group mb-4"&gt;&lt;/ul&gt;
+                &lt;div class="col-12 col-md-6 col-lg-3"&gt;
+                    &lt;div class="card h-100"&gt;
+                        &lt;img src="societies_1.jpg"
+                            class="card-img-top img-fluid" alt="Society Day"&gt;
+                        &lt;div class="card-body"&gt;
+                            &lt;h5 class="card-title"&gt;Society Day&lt;/h5&gt;
+                            &lt;p class="card-text"&gt;Discover student societies
+                                and explore their activities and opportunities.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
 
-    &lt;/div&gt;
+                &lt;div class="col-12 col-md-6 col-lg-3"&gt;
+                    &lt;div class="card h-100"&gt;
+                        &lt;img src="societies_2.png"
+                            class="card-img-top img-fluid" alt="Cultural Night"&gt;
+                        &lt;div class="card-body"&gt;
+                            &lt;h5 class="card-title"&gt;Cultural Night&lt;/h5&gt;
+                            &lt;p class="card-text"&gt;Celebrate cultural traditions,
+                                music and student performances.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
 
-    &lt;script&gt;
-        const form = document.getElementById("registrationForm");
+                &lt;div class="col-12 col-md-6 col-lg-3"&gt;
+                    &lt;div class="card h-100"&gt;
+                        &lt;img src="sports_1.jpg"
+                            class="card-img-top img-fluid" alt="Sports Day"&gt;
+                        &lt;div class="card-body"&gt;
+                            &lt;h5 class="card-title"&gt;Sports Day&lt;/h5&gt;
+                            &lt;p class="card-text"&gt;Enjoy sports competitions,
+                                teamwork and friendly matches.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
 
-        form.addEventListener("submit", function(event) {
-            event.preventDefault();
+                &lt;div class="col-12 col-md-6 col-lg-3"&gt;
+                    &lt;div class="card h-100"&gt;
+                        &lt;img src="coding_pic.png"
+                            class="card-img-top img-fluid" alt="Programming Workshop"&gt;
+                        &lt;div class="card-body"&gt;
+                            &lt;h5 class="card-title"&gt;Programming Workshop&lt;/h5&gt;
+                            &lt;p class="card-text"&gt;Improve your coding skills
+                                through practical activities.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
 
-            const name = document.getElementById("name").value.trim();
-            const email = document.getElementById("mail").value.trim();
-            const eventName = document.getElementById("event-selector").value;
-            const detail = document.getElementById("detail");
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
 
-            if (name === "" || email === "") {
-                detail.value =
-                    "Error: Please enter your student name and email.";
-                detail.style.color = "red";
-                return;
-            }
+    &lt;!-- Schedule Section --&gt;
+    &lt;section id="Schedule"&gt;
+        &lt;div class="container py-5"&gt;
+            &lt;h2 class="text-center mb-4"&gt;Upcoming Events&lt;/h2&gt;
+            &lt;div class="table-responsive"&gt;
+                &lt;table class="table table-bordered table-striped"&gt;
+                    &lt;thead&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;Event Name&lt;/th&gt;
+                            &lt;th&gt;Date&lt;/th&gt;
+                            &lt;th&gt;Time&lt;/th&gt;
+                            &lt;th&gt;Venue&lt;/th&gt;
+                        &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Sports Day&lt;/td&gt;
+                            &lt;td&gt;15-Dec-2026&lt;/td&gt;
+                            &lt;td&gt;10:00 AM&lt;/td&gt;
+                            &lt;td&gt;Sports Ground, UET Mardan&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Society Day&lt;/td&gt;
+                            &lt;td&gt;28-Nov-2026&lt;/td&gt;
+                            &lt;td&gt;11:00 AM&lt;/td&gt;
+                            &lt;td&gt;Seminar Hall, UET Mardan&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Cultural Night&lt;/td&gt;
+                            &lt;td&gt;25-Dec-2026&lt;/td&gt;
+                            &lt;td&gt;8:10 PM&lt;/td&gt;
+                            &lt;td&gt;Haleem Gathering Hall, Mardan&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Programming Workshop&lt;/td&gt;
+                            &lt;td&gt;13-Jan-2027&lt;/td&gt;
+                            &lt;td&gt;9:00 AM&lt;/td&gt;
+                            &lt;td&gt;Programming Lab, Computer Science Department, UET Mardan&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                &lt;/table&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
 
-            if (eventName === "") {
-                detail.value = "Error: Please select an event.";
-                detail.style.color = "red";
-                return;
-            }
+    &lt;!-- Registration Form Section --&gt;
+    &lt;section id="Registration"&gt;
+        &lt;div class="container py-5"&gt;
+            &lt;h2 class="text-center mb-4"&gt;Registration Form&lt;/h2&gt;
+            &lt;form method="POST" enctype="multipart/form-data"&gt;
 
-            detail.value = "Congratulations, " + name +
-                "! You have registered for " + eventName + ".";
+                &lt;div class="mb-4"&gt;
+                    &lt;label class="form-label"&gt;Full Name:&lt;/label&gt;
+                    &lt;input type="text" class="form-control" name="full name"&gt;
+                &lt;/div&gt;
 
-            detail.style.color = "green";
-        });
-    &lt;/script&gt;
+                &lt;div class="mb-4"&gt;
+                    &lt;label class="form-label"&gt;Email:&lt;/label&gt;
+                    &lt;input type="email" class="form-control" name="Email"&gt;
+                &lt;/div&gt;
 
-    &lt;script&gt;
-        $(document).ready(function() {
+                &lt;div class="mb-4"&gt;
+                    &lt;label class="form-label"&gt;Department:&lt;/label&gt;
+                    &lt;select class="form-select"&gt;
+                        &lt;option selected&gt;Select Department&lt;/option&gt;
+                        &lt;option&gt;Computer Science&lt;/option&gt;
+                        &lt;option&gt;Computing Engineering&lt;/option&gt;
+                        &lt;option&gt;Electrical Engineering&lt;/option&gt;
+                        &lt;option&gt;Civil Engineering&lt;/option&gt;
+                        &lt;option&gt;Telecommunication&lt;/option&gt;
+                        &lt;option&gt;Mechanical Engineering&lt;/option&gt;
+                    &lt;/select&gt;
+                &lt;/div&gt;
 
-            $("#toggleinstruction").click(function() {
-                $("#sh").toggle();
-            });
+                &lt;div class="mb-4"&gt;
+                    &lt;label class="form-label"&gt;Events:&lt;/label&gt;
+                    &lt;select class="form-select"&gt;
+                        &lt;option selected&gt;Select Event&lt;/option&gt;
+                        &lt;option&gt;Sports Day&lt;/option&gt;
+                        &lt;option&gt;Society Day&lt;/option&gt;
+                        &lt;option&gt;Cultural Night&lt;/option&gt;
+                        &lt;option&gt;Programming Workshop&lt;/option&gt;
+                    &lt;/select&gt;
+                &lt;/div&gt;
 
-            $("#toggleevent").click(function() {
-                $("#eventDetails").slideToggle();
-            });
+                &lt;div class="mb-4"&gt;
+                    &lt;label class="form-label"&gt;Gender:&lt;/label&gt;
+                    &lt;div class="form-check"&gt;
+                        &lt;input type="radio" name="gender" id="male"
+                            class="form-check-input"&gt;
+                        &lt;label for="male" class="form-check-label"&gt;Male&lt;/label&gt;
+                    &lt;/div&gt;
+                    &lt;div class="form-check"&gt;
+                        &lt;input type="radio" name="gender" id="female"
+                            class="form-check-input"&gt;
+                        &lt;label for="female" class="form-check-label"&gt;Female&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
 
-            $("#addEvent").click(function() {
-                const selectedEvent = $("#event-selector").val();
+                &lt;div class="mb-4"&gt;
+                    &lt;label for="message" class="form-label"&gt;Message:&lt;/label&gt;
+                    &lt;textarea class="form-control" id="message"&gt;&lt;/textarea&gt;
+                &lt;/div&gt;
 
-                if (selectedEvent === "") {
-                    $("#jqueryMessage")
-                        .text("Please select an event first.")
-                        .fadeIn();
-                    return;
-                }
+                &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+            &lt;/form&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
 
-                $("#jqueryMessage").hide();
-
-                const newItem = $("&lt;li&gt;")
-                    .addClass("list-group-item")
-                    .text(selectedEvent);
-
-                $("#eventList").append(newItem);
-            });
-
-            $("#changeStyle").click(function() {
-                $("#event_title").css({
-                    "background-color": "black",
-                    "color": "yellow"
-                });
-            });
-
-            $("#event_title").mouseover(function() {
-                $(this).css("color", "red");
-            });
-
-            $("#event_title").mouseout(function() {
-                $(this).css("color", "blue");
-            });
-
-        });
-    &lt;/script&gt;
-
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-
             </code></pre>
-            </div>
-        </details>
-    </section>
+        </div>
+    </details>
+</section>
+
+
 
 <style>
     .source-box {
